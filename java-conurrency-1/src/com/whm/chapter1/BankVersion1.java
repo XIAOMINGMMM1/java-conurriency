@@ -6,6 +6,12 @@ package com.whm.chapter1;
  */
 public class BankVersion1 {
     public static void main(String[] args) throws InterruptedException {
+        Runnable runnable=() -> {
+
+        };
+
+        ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();
+//        threadGroup.enumerate()
         TicketWindowRunable ticketWindowRunable = new TicketWindowRunable();
         Thread thread1 = new Thread(ticketWindowRunable, "窗口1");
         Thread thread2 = new Thread(ticketWindowRunable, "窗口2");
